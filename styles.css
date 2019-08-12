@@ -22,6 +22,7 @@
 
 .Nav-options {
   display: flex;
+  padding-left: 0;
 }
 
 .Nav-options li {
@@ -127,6 +128,16 @@
 }
 
 @media all and (max-width: 720px) {
+  .Nav {
+    margin: 0;
+  }
+
+  .Nav-options {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
   .Container {
     flex-direction: column;
   }
@@ -137,5 +148,12 @@
 
   .Image {
     width: 100%;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  body {
+    margin: 0 auto;
+    width: 1200px;
   }
 }
