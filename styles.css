@@ -1,0 +1,141 @@
+* {
+  --text-secondary-color: #69C5F1;
+  --accent-color: #F2CD2F;
+  font-family: 'Merriweather', serif;
+}
+
+/* START NAVBAR STYLES */
+.Nav {
+  height: 80px;
+  margin: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+.Nav-logo {
+  height: 100%;
+}
+
+.Nav-options {
+  display: flex;
+}
+
+.Nav-options li {
+  list-style-type: none;
+  margin-left: 22px;
+}
+
+.Nav-options li a {
+  text-decoration: none;
+  color: var(--text-secondary-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* END NAVBAR STYLES */
+
+.Bullet-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.u-Circle {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+}
+
+.u-Circle.is-yellow {
+  background-color: var(--accent-color);
+}
+
+.u-Circle.is-green {
+  background-color: greenyellow;
+}
+
+.Bullet-text {
+  margin-left: 4px;
+  font-size: 14px;
+  color: gray;
+}
+
+.Container {
+  margin: 32px 16px;
+  display: flex;
+}
+
+.Post {
+  width: 60%;
+}
+
+.Post-base {
+  padding-right: 16px;
+}
+
+.Post-base h2 {
+  margin: 8px 0;
+  font-size: 24px;
+}
+
+.Post-by {
+  color: gray;
+  font-size: 14px;
+}
+
+.Post-name {
+  color: orange;
+}
+
+.Post-base p {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.Post-base a {
+  color: var(--text-secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  display: inline-block;
+}
+
+.Image {
+  width: 40%;
+}
+
+.Image img {
+  width: 100%;
+}
+
+.Image a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text-secondary-color);
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+@media all and (max-width: 720px) {
+  .Container {
+    flex-direction: column;
+  }
+
+  .Post {
+    width: 100%;
+  }
+
+  .Image {
+    width: 100%;
+  }
+}
