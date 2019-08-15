@@ -7,13 +7,14 @@
 /* START NAVBAR STYLES */
 .Nav {
   height: 80px;
-  margin: 0 16px;
+  padding: 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
-  background: white;
+  background-color: white;
+  z-index: 999;
 }
 
 .Nav-logo {
@@ -113,8 +114,68 @@
   width: 40%;
 }
 
-.Image img {
+.Image-small-screen {
+  display: none;
+}
+
+.Image-container {
   width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.Image-container:hover .Image-backward {
+  transform: rotate(5deg) translate(40%, -20%);
+}
+
+.Image-forward {
+  background-color: var(--accent-color);
+  height: 80%;
+  width: 80%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  padding: 0 12px;
+}
+
+.Image-forward h3 {
+  color: white;
+  font-weight: 300;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.Image-forward span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.Image-forward .Image-logo {
+  width: 20%;
+  height: 20%;
+  background: #F1E434;
+  position: absolute;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Image-forward .Image-logo P {
+  color: white;
+  font-size: 48px;
+}
+
+.Image-backward {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3);
+  position: absolute;
+  height: 80%;
+  width: 70%;
+  bottom: 0;
+  z-index: -1;
+  transition: .3s;
+  padding: 0 12px;
+  overflow: hidden;
 }
 
 .Image a {
@@ -125,6 +186,17 @@
   display: inline-block;
   margin-top: 16px;
   margin-bottom: 32px;
+}
+
+@media all and (max-width: 1200px) {
+  .Image-container {
+    display: none;
+  }
+
+  .Image-small-screen {
+    display: inline-block;
+    max-width: 100%;
+  }
 }
 
 @media all and (max-width: 720px) {
@@ -148,6 +220,21 @@
 
   .Image {
     width: 100%;
+  }
+
+  .Image-container {
+    display: none;
+  }
+
+  .Image-container-static {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .Image-small-screen {
+    display: inline-block;
+    max-width: 100%;
   }
 }
 
